@@ -33,25 +33,31 @@
 	font-style: normal;
 }
 
-body {
+.page {
 	margin: 0;
-	font-family: "OpenSans", sans-serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .Section0 {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
 	max-width: 1579px;
 	min-height: 688px;
 	background-color: #F6F2F2;
 }
 
 .header {
-	margin: 0 auto;
+	box-sizing: border-box;
 	display: flex;
-	margin-left: 164px;
-    margin-right: 166px;
+	width: 100%;
+	margin: auto;
     margin-top: 29px;
-	align-items: center;
-	justify-content: center;
+	align-items: stretch;
 	max-width: 1249px;
 	min-height: 89px;
 	background-color: #000000;
@@ -59,12 +65,18 @@ body {
 
 .site-menu {
 	display: flex;
+	flex-wrap: wrap;
+	max-width: 434px;
+	width: 100%;
+	padding-top: 15px;
+	margin: auto;
+	justify-content: space-between;
+
 }
 
 .site-menu > a {
 	display: flex;
-    padding: 42px 52px 40px;
-	color: #e0e0e0;
+   	color: #e0e0e0;
 	font-size: 14px;
 	line-height: 24px;
 	font-weight: Bold;
@@ -78,34 +90,38 @@ body {
 
 .Section1 {
 	display: flex;
-	margin: 101px 163px 110px 163px;
+	flex-wrap: wrap;
+	box-sizing: border-box;
 	max-width: 1253px;
+	width: 100%;
+	margin: 101px 163px 110px 163px;
 }
 
 .Section1-text {
-	display: inline-block; /*Выравниваем блоки с display: inline-block относительно базовой линии (то есть вертикально по центру).*/
+/*	display: inline-block; /*Выравниваем блоки с display: inline-block относительно базовой линии (то есть вертикально по центру).
 	max-width: 50%;
-	vertical-align: top;
+	vertical-align: top;*/
 	margin-right: 82px;
 }
 
 .Section1-text h1 {
-	font-family: sans-serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	margin: 0;
 	max-width: 618px;
 	font-size: 60px;
-	line-height: 59px;
+	line-height: 1.05;
 	font-weight: 800;
-	letter-spacing: 1.5px;
+	letter-spacing: 1.9px;
 	text-transform: uppercase;
-	margin-bottom: 36px;
+	margin-bottom: 25px;
 }
 
 .Section1-Inboxtext {
-	margin: 0 0 63px 0;
-	max-width: 545px;
+	margin: 0 0 58px 0;
+	max-width: 544px;
 	font-size: 16px;
 	line-height: 28px;
+	letter-spacing: 1.5px;
 }
 
 .ContactUs {
@@ -126,37 +142,41 @@ body {
 	height: 356px;
 }
 
+/*-------------------------------------*/
+
 .Section2 {
-	margin: 107px 163px 104px 163px;
+
+	margin: 99px 94px 52px 163px;
 	display: flex;
 	background-color: #FFFFFF;
 	max-width: 1249px;
 	min-height: 584px;
+	opacity: 0.7;
 }
 
 .Section2-text {
 	/*display: inline-block; /*Выравниваем блоки с display: inline-block относительно базовой линии (то есть вертикально по центру).*/
-	/*max-width: 50%;
+	width: 641px;
 	vertical-align: top;
-	margin-right: 100px;*/
+/*	margin-right: 100px;*/
 }
 
-.Section2 h2 {
+.Section2-h2 {
 	margin: 0;
 	max-width: 523px;
 	font-size: 42px;
-	line-height: 48px;
+	line-height: 55px;
 	font-weight: 700;
 	letter-spacing: 0.42px;
 	text-transform: uppercase;
-	margin-bottom: 50px;
+	margin-bottom: 33px;
 }
 
 .Section2-Inboxtext {
 	max-width: 539px;
-	margin-bottom: 64px;
+	margin-bottom: 59px;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 26px;
 	font-weight: normal;
 }
 
@@ -175,52 +195,90 @@ body {
 }
 
 .Section2-2 {
+	box-sizing: border-box;
 	max-width: 610px;
-	min-height: 485px;
 	display: flex;
 	flex-wrap: wrap;
+	padding-top: 6px;
 }
 
 .Section22-text {
-	width: 50%;
-	font-size: 16px;
-	line-height: 24px;
+	flex: 1 1 288px;
+	width: 288px;
 }
 
-.Section22-text h3 {
+.Section22-text:nth-child(odd) {
+	margin-right: 32px;
+}
+
+.Section2-Inboxtext {
 	margin: 0;
-	max-width: 215px;
-	min-height: 24px;
-	font-size: 24px;
-	font-weight: 600;
-	letter-spacing: 0.27px;
+	line-height: 1.75;
+	margin-bottom: 51px;
 }
 
+.Section2-all {
+	margin: 0;
+	letter-spacing: 1.5px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+ .Section2-all::before {
+ 	display: block;
+	width: 37px;
+	height: 37px;
+	margin-bottom: 32px;
+ }
+
+ .Section22-Management::before {
+	content: url('../images/service-1.png');
+}
+
+ .Section22-Ux::before {
+	content: url('../images/service-2.png');
+}
+
+ .Section22-Logo::before {
+	content: url('../images/service-3.png');
+}
+
+ .Section22-Animation::before {
+	content: url('../images/service-4.png');
+}
+
+/*--------------------------------------------*/
 .Section3 {
-	/*display: inline-block;*/
 	max-width: 1432px;
 	min-height: 930px;
+	padding-top: 57px;
+	opacity: 0.7;
 }
 
 .Section3 h2 {
 	margin: 0;
+	margin-left: 180px;
 	text-align: center;
 	font-size: 42px;
 	font-weight: 700;
-	margin-bottom: 28px;
+	margin-bottom: 17px;
+	letter-spacing: -1.05px;
 	text-transform: uppercase;
 }
 
 .Section3-Inboxtext {
 	margin: 0;
+	margin-left: 142px;
 	text-align: center;
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 400;
-	margin-bottom: 33px;
+	margin-bottom: 24px;
 }
 
 .Section3-line {
+	margin-left: 734px;
     width: 134px;
     height: 5px;
     color: #FF2D2D;
@@ -229,9 +287,11 @@ body {
 
 .Section3-menu {
 	display: flex;
-	justify-content: center;
-	padding-top: 86px;
-	padding-bottom: 40px;
+	max-width: 922px;
+	justify-content: space-between;
+	margin-left: 365px;
+	padding-top: 79px;
+	padding-bottom: 56px;
 }
 
 .Section3-menu > a {
@@ -250,31 +310,32 @@ body {
 }
 
 .Section3-foto {
+	    display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-left: 161px;
-	max-width: 1432px;
-	min-height: 683px;
 }
 
 .Section3-box {
-    display: inline-block;
     max-width: 301px;
-    width: 33%;
     min-height: 293px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    background-color: #5281FF;
+    margin-right: 16px;
+    margin-bottom: 13px;
 }
 
+/*-----------------------------------*/
+
 .Section4 {
-	/*display: inline-block;*/
-	margin: 0 164px 0 112px;
+	margin: 113px 164px 0 112px;
 	max-width: 1301px;
 	min-height: 710px;
 }
 
 .Section4 h2 {
 	margin: 0;
-	margin-left: 35px;
+	margin-left: 50px;
+	letter-spacing: -1px;
 	text-align: left;
 	font-size: 42px;
 	font-weight: 700;
@@ -283,37 +344,41 @@ body {
 
 .Section4-Inboxtext {
 	margin: 0;
-	margin-left: 35px;
-	padding-top: 35px;
-    padding-bottom: 35px;
+	margin-left: 52px;
+	padding-top: 20px;
+    padding-bottom: 30px;
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 400;
 	text-align: left;
 	max-width: 478px;
 	min-height: 73px;
+	letter-spacing: 0.4px;
 }
 
 .Section4-line {
 	margin: 0;
-	margin-left: 35px;
-	margin-bottom: 50px;
+	margin-left: 52px;
+	margin-bottom: 61px;
     width: 134px;
     height: 5px;
     color: #FF2D2D;
     background-color: #FF2D2D;
 } 
 
+/*---------------------------*/
+
 .Section5 {
 	display: flex;
-	margin-left: 35px;
+	margin-left: 50px;
 	max-width: 1301px;
 	margin-bottom: 106px;
 }
 
 .Section5-blok1 {
 	max-width: 422px;
-	padding-right: 49px;
+	margin-top: 6px;
+	padding-right: 71px;
 }
 
 .Section5-blok2 {
@@ -330,14 +395,17 @@ body {
 }
 
 .Section5-Inboxtext {
-	margin-left: 35px;
+	margin: 0;
+	margin-top: 19px;
 	font-size: 16px;
 	line-height: 28px;
+	letter-spacing: 0.4px;
 }
 
 .Section5-menu {
-	padding-top: 50px;
-    padding-bottom: 30px;
+	padding-top: 40px;
+    padding-bottom: 60px;
+    justify-content: space-between;
 }
 
 .Section5-menu > a {
@@ -359,6 +427,7 @@ body {
 .Section5-foto {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	max-width: 879px;
 	min-height: 217px;
 }
@@ -375,42 +444,46 @@ body {
 }
 
 .Section5-box1text {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	visibility: hidden;
+	color: #ffffff;
 	position: absolute;
-	bottom: -14px;
-	max-width: 197px;
-	min-height: 37px;
+	bottom: 0;
+	width: 100%;
+	height: 37px;
+	margin: 0;
 	text-align: center;
-	padding-top: 12px;
-	font-size: 18px;
-	font-weight: 600;
+	background-color: #000;
 	text-transform: uppercase;
-	background-color: rgba(0, 0, 0, 0.0);
-	color: rgba(0, 0, 0, 0.0);
+	opacity: 0.5;
 }
 
-.Section5-box1 > p:hover {
-	background-color: rgba(0, 0, 0, 0.5);
-	color: #ffffff;
+.Section5-box1:hover > .Section5-box1text {
+	visibility: visible;
 }
+
+/*-------------------------------*/
 
 .Section6 {
 	margin: 0;
-	/*display: flex;*/
+	/*	margin-left: 6px;*/
 	background-color: #2c2c2c;
 	max-width: 1579px;
 	min-height: 516px;
-	/*padding: 100px 0 123px;*/
 }
 
 .Section6 h4 {
 	margin: 0;
-	padding-top: 150px;
-	padding-bottom: 17px;
+	padding-top: 157px;
+	padding-bottom: 24px;
 	text-align: center;
 	font-size: 42px;
 	line-height: 24px;
 	font-weight: 700;
 	color: #ffffff;
+	letter-spacing: 2px;
 }
 
 .Section6 > p {
@@ -424,6 +497,7 @@ body {
 }
 
 .Section6-input{
+	box-sizing: border-box;
 	margin-left: 408px;
     margin-top: 57px;
     margin-right: 19px;
@@ -449,14 +523,12 @@ body {
 /*------------------------------------*/
 
 .Section7 {
-	margin: 104px 0 107px 161px;
+	box-sizing: border-box;
+	margin: 98px 0 107px 161px;
 	max-width: 1419px;
 	min-height: 771px;
 	display: flex;
-   /* justify-content: center;*/
     align-items: flex-end;
- /*   padding-top: 92px;
-    padding-bottom: 110px;*/
 }
 
 /*.feedback__left-box {
@@ -475,7 +547,7 @@ body {
 
 .Section7 h2 {
 	margin: 0;
-	margin-bottom: 45px;
+	margin-bottom: 38px;
 	max-width: 328px;
 	min-height: 32px;
 	text-align: left;
@@ -488,7 +560,7 @@ body {
 
 .Section7-text1 {
 	margin: 0;
-	margin-bottom: 59px;
+	margin-bottom: 50px;
     max-width: 753px;
     min-height: 73px;
     font-size: 16px;
@@ -501,12 +573,10 @@ body {
 	margin: 0;
     width: 134px;
     height: 5px;
-    margin-bottom: 77px;
+    margin-bottom: 73px;
     color: #FF2D2D;
     background-color: #FF2D2D;
 } 
-
-
 
 .Section7-boxLeft {
 	position: relative;
@@ -579,6 +649,7 @@ body {
 .Section7-box2 {
 	max-width: 580px;
 	min-height: 485px;
+	margin-left: 82px;
 	width: 100%;
 	box-sizing: border-box;
 	background-color: #000000;
@@ -587,9 +658,10 @@ body {
 
 .Section7-Contact {
 	padding-left: 81px;
-    padding-top: 141px;
+    padding-top: 119px;
 	max-width: 315px;
 	min-height: 203px;
+		line-height: 1.9;
 
 }
 
@@ -601,9 +673,115 @@ body {
 }
 /*--------------------------------------*/
 
+.Footer-all {
+	margin: 0;
+	box-sizing: border-box;
+	margin-left: 6px;
+	background-color: #313030;
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1586px;
+	min-height: 113px;
+}
 
+.Footer-copyright {
+	margin: 0;
+	padding-left: 157px;
+	padding-top: 19px;
+	color: #B8B8B8;
+}
+
+.Footer-social {
+	width: 208px;
+	justify-content: space-between;
+	padding-right: 160px;
+	padding-top: 16px;
+}
+
+.Footer-social > .Footer-link:not(:last-child) {
+	margin-right: 14px;
+
+}
+
+/*
 @media srceen and (max-width 750px) {
 	.Section2 {
 		flex-wrap: wrap;
 	}
+}*/
+
+/*--------------------------------------------*/
+	@media screen and (max-width: 1600px) {
+	.Section1 {
+		flex-wrap: nowrap;
+		margin: auto;
+	}
+
+	.Section1-text {
+		width: 50%;
+		box-sizing: border-box;
+		margin-right: 0;
+		padding-right: 15px;
+	}
+
+		.Section1-text > h1 {
+		font-size: 5vw;
+	}
+
+	.Section-link {
+		width: 50%;
+	}
+
+	.image {
+		width: 100%;
+		height: auto;
+	}
+
+	.Section2 {
+		margin: auto;
+	}
+
+	.Section3-menu {
+		flex-wrap: wrap;
+	}
+
+	.Section3-foto {
+		justify-content: flex-start;
+	}
+
+	.Section3-box {
+		max-width: 100%;
+		margin-right: 1vw;
+	}
+	.Section7-Blok1 {
+		margin: 0 auto;
+		margin-bottom: 30px;
+		padding: 0 1vw;
+		grid-column: 1 / 6;
+		grid-row: 1 / 2;
+	}
+	.Section7-boxLeft {
+		margin-right: 0;
+	}
+	.Section7 {
+		flex-wrap: wrap;
+		padding-left: initial;
+		padding-right: initial;
+		padding-bottom: 0;
+		grid-template-columns: 100%;
+	}
+
+	.Section7-box2 {
+		width: 100%;
+		max-width: 100%;
+		grid-column: 1 / 6;
+		grid-row: 2 / 3;
+	}
 }
+
+	@media screen and (max-width: 750px) {
+	.Section1 {
+		flex-wrap: wrap;
+	}
